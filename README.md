@@ -23,7 +23,8 @@ Add dependencies:
 
 
 ```bash
-uv add fastapi uvicorn[standard] pydantic
+uv add fastapi uvicorn[standard] pydantic loguru httpx python-multipart
+uv add --dev pytest pytest-asyncio black isort ruff
 ```
 
 Sync and lock dependencies:
@@ -33,8 +34,9 @@ uv sync
 uv lock
 ```
 
-Run:
+Run `dev` environment server:
 
 ```bash
 uv run uvicorn app.main:app --reload
 ```
+
